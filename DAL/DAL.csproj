@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6EF104E4-ED48-455B-8730-D31CDD45CE28}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>NHibernate1Demo</RootNamespace>
-    <AssemblyName>NHibernate1Demo</AssemblyName>
+    <ProjectGuid>{376D71C1-3441-4C1D-A92D-0B5B42D80577}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,25 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="EnterpriseDal.cs" />
+    <Compile Include="OrderDal.cs" />
+    <Compile Include="ProductDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="hibernate.cfg.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <Compile Include="UserDal.cs" />
+    <Compile Include="util\NHibernateHelper.cs" />
+    <Compile Include="util\SchemaExportFixture.cs" />
+    <Compile Include="util\SessionHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\NHibernate\NHibernate-1.1.csproj">
       <Project>{ee3b9473-7c64-44ff-b342-91b558d413a8}</Project>
       <Name>NHibernate-1.1</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{376d71c1-3441-4c1d-a92d-0b5b42d80577}</Project>
-      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Entry\Entry.csproj">
       <Project>{86763c00-066f-437b-8b4a-4409fb0fda5a}</Project>
