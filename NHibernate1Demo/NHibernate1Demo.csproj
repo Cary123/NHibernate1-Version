@@ -54,10 +54,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\NHibernate\NHibernate-1.1.csproj">
-      <Project>{ee3b9473-7c64-44ff-b342-91b558d413a8}</Project>
-      <Name>NHibernate-1.1</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{376d71c1-3441-4c1d-a92d-0b5b42d80577}</Project>
       <Name>DAL</Name>
@@ -65,6 +61,10 @@
     <ProjectReference Include="..\Entry\Entry.csproj">
       <Project>{86763c00-066f-437b-8b4a-4409fb0fda5a}</Project>
       <Name>Entry</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NHibernate\NHibernate-1.1.csproj">
+      <Project>{ee3b9473-7c64-44ff-b342-91b558d413a8}</Project>
+      <Name>NHibernate-1.1</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
